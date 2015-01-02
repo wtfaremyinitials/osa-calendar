@@ -1,0 +1,29 @@
+{
+  "name": "osa-calendar",
+  "version": "0.0.0",
+  "description": "A module to interact with OSX Calendar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wtfaremyinitials/osa-calendar.git"
+  },
+  "keywords": [
+    "osa",
+    "calendar",
+    "osx",
+    "yosemite",
+    "jxa"
+  ],
+  "author": "Will Franzen <wtfranzen@gmail.com> (http://will.xyz/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wtfaremyinitials/osa-calendar/issues"
+  },
+  "homepage": "https://github.com/wtfaremyinitials/osa-calendar",
+  "dependencies": {
+    "osa": "^2.1.0"
+  }
+}
