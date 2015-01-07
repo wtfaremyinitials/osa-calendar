@@ -21,4 +21,28 @@ Calendar.getCalendars = function(cb) {
     }, cb);
 };
 
+Calendar.getEvents = function(cal, cb) {
+    if(typeof(cal) == 'object')
+        cal = cal.uid;
+
+    osa(function(id) {
+        var Calendar = Application('Calendar');
+        var $events = Calendar.calendars.byId(id).events;
+
+        var events = [];
+
+        for(var i=0; i<$events.length; i++) {
+            events[i] = {
+                name:        $events[i].summary(),
+                uid:         $events[i].uid(),
+                description: $events[i].description()
+
+                /* TODO: More fields to grab */
+            };
+        }
+
+        return events;
+    }, cal, cb);
+};
+
 module.exports = Calendar;
