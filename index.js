@@ -35,8 +35,9 @@ Calendar.getEvents = function(cal, cb) {
             events[i] = {
                 name:        $events[i].summary(),
                 uid:         $events[i].uid(),
-                description: $events[i].description()
-
+                description: $events[i].description(),
+                start:       $events[i].startDate(),
+                end:         $events[i].endDate()
                 /* TODO: More fields to grab */
             };
         }
