@@ -3,7 +3,7 @@ var osa = require('osa');
 var Calendar = {};
 
 Calendar.getCalendars = function(cb) {
-    osa(function() {
+    return osa(function() {
         var Calendar = Application('Calendar');
         var $calendars = Calendar.calendars;
 
@@ -25,7 +25,7 @@ Calendar.getEvents = function(cal, cb) {
     if(typeof(cal) == 'object')
         cal = cal.uid;
 
-    osa(function(id) {
+    return osa(function(id) {
         var Calendar = Application('Calendar');
         var $events = Calendar.calendars.byId(id).events;
 
